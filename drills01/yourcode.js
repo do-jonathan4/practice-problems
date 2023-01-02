@@ -26,6 +26,10 @@ function getAllNamesShorterThan(names, num){
     return result
 }
 
-function makeLabel(){
-
+function makeLabel(obj){
+    const mail = obj['home address']
+    const name = `${obj.greeting} ${obj.givenName} ${obj.familyName}`
+    const street = `${mail.streetNumber} ${mail.streetName}`
+    const address = `${mail.city}, ${mail.state} ${mail.zip}`
+    return `${name}\n${street}\n${address}`
 }
