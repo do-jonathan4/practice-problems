@@ -17,10 +17,21 @@ function wordLengths(arr){
     return result
 }
 
-function getMinMaxMean(){
-
+function getMinMaxMean(arr){
+    const mean = arr.reduce((sum, i) => sum + i)/arr.length
+    const min = arr.sort((a, b) => a-b)[0]
+    const max = arr.sort((a, b) => a-b)[arr.length-1]
+    return {min, max, mean}
 }
 
-function findMode(){
-
+function findMode(arr){
+    let obj = {}
+    for (let i = 0; i < arr.length; i++) {
+        if (obj[arr[i]]) {
+            obj[arr[i]]++
+        } else {
+            obj[arr[i]] = 1
+        }
+    }
+    console.log(obj)
 }
