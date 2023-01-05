@@ -33,5 +33,15 @@ function findMode(arr){
             obj[arr[i]] = 1
         }
     }
-    console.log(obj)
+
+    let mode = 0
+    let count = 0
+    for (const prop in obj) {
+        if (obj[prop] > count) {
+            count = obj[prop]
+            mode = Number(prop)
+        }
+    }
+    
+    return mode
 }
