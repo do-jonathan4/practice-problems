@@ -1,18 +1,22 @@
 
 
-function getPath(){
-
+function getPath(path){
+    return path.split('/')
 }
 
 function getPathParts(){
 
 }
 
-function getCapitalCount(){
-
+function getCapitalCount(arr){
+    let count = 0
+    for (let word of arr) {
+        if (word[0].toUpperCase() === word[0]) count++
+    }
+    return count
 }
 
-function correctCalcChecker(){
+function correctCalcChecker(arr){
 
 }
 
