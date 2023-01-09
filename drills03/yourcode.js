@@ -4,8 +4,15 @@ function getPath(path){
     return path.split('/')
 }
 
-function getPathParts(){
-
+function getPathParts(url){
+    let [protocol, host, pathportfile] = url.split(':')
+    host = host.slice(2)
+    let num1 = pathportfile.indexOf('/')
+    let num2 = pathportfile.lastIndexOf('/')
+    let port = pathportfile.slice(0, num1)*1
+    let path = pathportfile.slice(num1+1, num2)
+    let file = pathportfile.slice(num2+1)
+    return {protocol, host, port, path, file}
 }
 
 function getCapitalCount(arr){
