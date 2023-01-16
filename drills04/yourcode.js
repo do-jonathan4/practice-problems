@@ -30,4 +30,3 @@ function removeElements(elementClass){
     let element = document.querySelectorAll(elementClass)
     element.forEach(x => x.remove())
 }
-
