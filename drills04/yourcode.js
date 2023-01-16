@@ -15,14 +15,19 @@ function changeElements(numClass){
     })
 }
 
-function appendTextToElement(){
-
+function appendTextToElement(elementClass, text){
+    let element = document.querySelectorAll(elementClass)
+    element.forEach(x => x.append(text))
 }
 
-function addClass(){
+function addClass(elementClass, extraClass){
+    let element = document.querySelectorAll(elementClass)
+    element.forEach(x => x.classList.add(extraClass))
+    return(element.length)
 }
 
-function removeElements(){
-
+function removeElements(elementClass){
+    let element = document.querySelectorAll(elementClass)
+    element.forEach(x => x.remove())
 }
 
