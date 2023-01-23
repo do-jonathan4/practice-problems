@@ -7,7 +7,7 @@ function populateRecords(arr){
     row.insertAdjacentHTML("afterbegin", "<th>TYPE</th>")
     row.insertAdjacentHTML("beforeend", "<th>SOURCE</th>")
     row.insertAdjacentHTML("beforeend", "<th>AMOUNT</th>")
-    row.classList.add('transactionRecord')
+    row.classList.add("transactionRecord")
     tbl.append(row)
 
     row.childNodes[0].classList.add("transactionType")
