@@ -5,8 +5,9 @@ function removeClassFromElement(classSelect, classRemove){
     arr.forEach(x => x.classList.remove(classRemove))
 }
 
-function toggleClassOnElement(){
-	
+function toggleClassOnElement(classSelect, toogleClass){
+	let arr = document.querySelectorAll(classSelect)
+    arr.forEach(x => x.classList.toggle(toogleClass))
 }
 
 function hideElements(  ){
