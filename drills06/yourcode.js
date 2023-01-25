@@ -17,8 +17,9 @@ function hideElements(target, removalType){
     if (removalType === 'removeSelf') element.remove()
 }
 
-function addAttributeToElement( ){
-	
+function addAttributeToElement(target, attribute, value){
+	const element = document.querySelector(target)
+    element[attribute] = value
 }
 
 function putPosInElement(  ){
