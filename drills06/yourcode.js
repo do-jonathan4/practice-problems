@@ -10,8 +10,11 @@ function toggleClassOnElement(classSelect, toogleClass){
     arr.forEach(x => x.classList.toggle(toogleClass))
 }
 
-function hideElements(  ){
-	
+function hideElements(target, removalType){
+    const element = document.querySelector(target)
+    if (removalType === 'hide') element.style.display = "none"
+    if (removalType === 'removeChildren') element.innerHTML = ''
+    if (removalType === 'removeSelf') element.remove()
 }
 
 function addAttributeToElement( ){
