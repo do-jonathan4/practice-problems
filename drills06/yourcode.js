@@ -22,8 +22,12 @@ function addAttributeToElement(target, attribute, value){
     element[attribute] = value
 }
 
-function putPosInElement(  ){
-	
+function putPosInElement(target){
+	const element = document.querySelector(target)
+    let x = element.offsetTop
+    let y = element.offsetLeft
+    element.innerHTML = `x: ${x}px` + "<br>" + `y: ${y}px`
+    return {x, y}
 }
 
 
